@@ -21,7 +21,7 @@ pipeline {
            
             steps {
                 echo 'Terraform Apply command'
-                sh 'terrafrom apply'
+                sh 'terraform apply'
             }
         }
     }
