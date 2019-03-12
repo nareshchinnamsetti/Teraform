@@ -1,7 +1,13 @@
 pipeline {
     agent any
     stages {
-        
+        stage ('Version'){
+            steps{
+                echo 'terraform'
+                sh 'terraform --version'
+                
+            }
+        }
        stage('Initialize Terraform') {
       
             steps {
