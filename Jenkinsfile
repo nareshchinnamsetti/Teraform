@@ -5,7 +5,7 @@ pipeline {
       
             steps {
                 echo 'Copy Repo'
-                sh 'cp /var/lib/jenkins/workspace/Terraform-Pipeline-Job ./jenkins/'
+                sh 'sudo cp /var/lib/jenkins/workspace/Terraform-Pipeline-Job ./jenkins/'
                 
             }
         }
