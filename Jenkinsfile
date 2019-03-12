@@ -38,7 +38,7 @@ pipeline {
            
             steps {
                 echo 'Terraform Apply command'
-                sh 'terraform apply'
+                sh 'terraform apply -auto-approve'
             }
         }
     }
