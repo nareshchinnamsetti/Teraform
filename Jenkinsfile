@@ -1,20 +1,7 @@
 pipeline {
     agent any
     stages {
-         stage('Plan') {
-            steps {
-                script {
-                    currentBuild.displayName = "${version}"
-                }
-                sh 'terraform init -input=false'
-                sh 'terraform workspace select ${environment}'
-                sh "terraform plan -input=false -out tfplan -var 'version=${version}' --var-file=environments/${environment}.tfvars"
-                sh 'terraform show -no-color tfplan > tfplan.txt'
-            }
-        }
-
-        
-        stage('Initialize Terraform') {
+       stage('Initialize Terraform') {
       
             steps {
                 echo 'Parsing Terraform command'
