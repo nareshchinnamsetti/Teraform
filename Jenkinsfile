@@ -6,7 +6,7 @@ pipeline {
       
             steps {
                 echo 'Parsing Terraform command'
-                sh 'sudo terraform init'
+                sh 'terraform init'
                 
             }
         }
