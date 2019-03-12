@@ -1,20 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage('Copy') {
-      
-            steps {
-                echo 'Copy Repo'
-                sh 'sudo cp /var/lib/jenkins/workspace/Terraform-Pipeline-Job ./jenkins/'
-                
-            }
-        }
-       
+        
        stage('Initialize Terraform') {
       
             steps {
                 echo 'Parsing Terraform command'
-                sh 'sudo /var/lib/jenkins/workspace/Terraform-pipelin-Job terraform init ./jenkins/'
+                sh 'sudo terraform init'
                 
             }
         }
