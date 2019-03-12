@@ -5,7 +5,7 @@ pipeline {
  steps {
  script {
  def tfHome = tool name: 'terraform'
- env.PATH = "${/opt/terraform}:${env.PATH}"
+ env.PATH = "${/home/jenkins/terraform}:${env.PATH}"
  }
  sh 'terraform — version'
  
