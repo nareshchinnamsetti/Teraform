@@ -4,7 +4,7 @@ pipeline {
         stage ('Version'){
             steps{
                 echo 'terraform'
-                sh 'terraform --version'
+                sh 'terraform --version -input=false'
                 
             }
         }
