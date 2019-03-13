@@ -18,12 +18,28 @@ pipeline {
                 
             }
         }
+               stage('Initialize Terraform') {
+      
+            steps {
+                echo 'Parsing Terraform command'
+                sh 'terraform init'
+                
+            }
+        }
+        stage('Terraform Plan') {
+      
+            steps {
+                echo 'Terrafrom Plan Command'
+                sh 'terraform plan'
+                
+            }
+        }
 
-        stage('Terraform destroy') {
+        stage('Terraform apply') {
            
             steps {
-                echo 'Terraform destroy command'
-                sh 'terraform destroy -auto-approve'
+                echo 'Terraform apply command'
+                sh 'terraform apply -auto-approve'
             }
         }
     }
