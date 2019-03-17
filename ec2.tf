@@ -8,7 +8,7 @@ resource "aws_instance" "myfirstec2"{
   ami = "ami-0565af6e282977273"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["${aws_security_group.instance.id}"]
-  key_name = "mykey"
+  key_name = "newkey"
   user_data = <<-EOF
               #!/bin/bash
               apt-get install apache2 -y 
